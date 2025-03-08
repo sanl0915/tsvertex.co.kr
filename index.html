@@ -7,30 +7,31 @@
     <meta name="robots" content="index, follow">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TSVERTEX - AI 기반 재테크 솔루션">
     <meta name="author" content="TSVERTEX Marketing Team">
     <title>TSVERTEX - AI 기반 재테크</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=CustomFont:wght@400;700&display=swap">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'CustomFont', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #0e0e0e;
             color: white;
             text-align: center;
+            overflow: hidden;
         }
         .video-container {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             overflow: hidden;
             z-index: -1;
         }
         .video-container video {
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             object-fit: cover;
             position: absolute;
             top: 0;
@@ -40,8 +41,13 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            position: relative;
+            z-index: 10;
         }
         header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             background: rgba(22, 27, 34, 0.8);
             padding: 20px;
             font-size: 24px;
@@ -49,6 +55,14 @@
             text-transform: uppercase;
             position: relative;
             z-index: 10;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
         }
         .hero {
             position: relative;
@@ -59,15 +73,9 @@
             align-items: center;
             justify-content: center;
             height: 90vh;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.4);
         }
-        .hero h1 {
-            font-size: 50px;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-            font-weight: bold;
-        }
-        .cta-button {
-            background: #ff9800;
+        .cta-button, .chat-button {
             padding: 15px 30px;
             font-size: 22px;
             color: white;
@@ -77,6 +85,32 @@
             text-decoration: none;
             display: inline-block;
             border-radius: 8px;
+            font-weight: bold;
+        }
+        .cta-button {
+            background: #ff9800;
+        }
+        .chat-button {
+            background: #ffcc00;
+            color: black;
+        }
+        .exchange-section {
+            padding: 50px 20px;
+            background-color: #121212;
+            text-align: center;
+        }
+        .exchange-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .exchange-logos img {
+            max-width: 100px;
+            transition: transform 0.3s;
+        }
+        .exchange-logos img:hover {
+            transform: scale(1.1);
         }
         footer {
             background: #222;
@@ -91,17 +125,37 @@
 <body>
     <div class="video-container">
         <video autoplay muted loop playsinline>
-            <source src="TSVertex/assets/videos/20250308_1611_Cryptocurrency Innovation Surge_storyboard_01jnt9gacsen5tfmbz11e5dy37.mp4" type="video/mp4">
+            <source src="assets/videos/background.mp4" type="video/mp4">
             브라우저가 비디오 태그를 지원하지 않습니다.
         </video>
     </div>
     
-    <header>TSVERTEX - AI 기반 재테크</header>
+    <header>
+        <div class="logo">
+            <img src="assets/images/Logos.png" alt="TS Vertex Logo">
+            <span>TS Vertex</span>
+        </div>
+    </header>
     <div class="hero">
         <h1>AI 기반 투자, 최적의 수익 전략</h1>
         <p>매일 수익을 적립하고, 최신 AI 기술로 금융을 혁신하세요.</p>
         <a href="https://ts-vertex.xyz/#/register?ref=425179" class="cta-button">지금 가입하기</a>
-        <p style="font-size: 18px; margin-top: 10px;">추천 코드: 425179</p>
+        <a href="https://open.kakao.com/o/sfpxWmjh" class="chat-button">카카오톡 오픈채팅 참여</a>
+        <p style="font-size: 18px; margin-top: 10px; font-weight: bold;">추천 코드: 425179</p>
+    </div>
+    
+    <div class="exchange-section">
+        <h2>거래 가능한 주요 거래소</h2>
+        <div class="exchange-logos">
+            <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" alt="Binance">
+            <img src="https://cryptologos.cc/logos/coinbase-logo.png" alt="Coinbase">
+            <img src="https://cryptologos.cc/logos/kraken-logo.png" alt="Kraken">
+            <img src="https://cryptologos.cc/logos/okex-okb-logo.png" alt="OKEx">
+            <img src="https://cryptologos.cc/logos/bitfinex-bfx-logo.png" alt="Bitfinex">
+            <img src="https://cryptologos.cc/logos/huobi-token-ht-logo.png" alt="Huobi">
+            <img src="https://cryptologos.cc/logos/bitstamp-bst-logo.png" alt="Bitstamp">
+            <img src="https://cryptologos.cc/logos/ftx-token-ftt-logo.png" alt="FTX">
+        </div>
     </div>
     
     <footer>
@@ -109,3 +163,4 @@
     </footer>
 </body>
 </html>
+
